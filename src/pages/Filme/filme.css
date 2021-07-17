@@ -1,0 +1,47 @@
+.filme {
+  display: flex;
+  flex-direction: column;
+  max-width: 900px;
+}
+
+.filme img {
+  border-radius: 8px;
+}
+
+.filme p {
+  text-align: justify;
+}
+
+.filme .buttons {
+  display: flex;
+}
+
+.filme button {
+  outline: none;
+  width: 100px;
+  height: 45px;
+  border: none;
+  background-color: #f8f4f4;
+  font-size: 20px;
+  color: #000;
+  border-radius: 5px;
+  margin: 10px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.filme button:hover {
+  background-color: brown;
+  color: #fff;
+}
+
+.filme a {
+  text-decoration: none;
+  color: #000;
+  transition: all 0.5s;
+}
+
+.filme a:hover {
+  text-decoration: none;
+  color: #fff;
+}

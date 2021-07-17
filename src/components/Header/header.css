@@ -1,0 +1,25 @@
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: brown;
+  width: 100%;
+  padding: 10px;
+}
+
+header .logo {
+  color: #fff;
+  font-size: 30px;
+  font-style: sans-serif;
+  text-decoration: none;
+  padding: 10px;
+}
+
+header .salvos {
+  background-color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
