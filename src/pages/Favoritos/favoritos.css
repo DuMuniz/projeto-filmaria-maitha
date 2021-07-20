@@ -1,3 +1,28 @@
 .favoritos h1 {
   text-align: center;
 }
+
+.favoritos ul{
+  padding: 0;
+}
+
+.favoritos ul li{
+  padding: 0;
+  list-style-type: none;
+  min-width: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.favoritos div{
+  display: flex;
+  min-width: 150px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.favoritos a{
+  text-decoration: none;
+  color: brown;
+}

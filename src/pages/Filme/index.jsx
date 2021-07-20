@@ -10,11 +10,28 @@ export default function Filme() {
   useEffect(() => {
     async function loadFilme() {
       const response = await api.get(`r-api/?api=filmes/${id}`);
-      console.log(response.data);
       setFilme(response.data);
     }
     loadFilme();
   }, [id]);
+
+  function salvaFilme(){
+    const minhaLista = localStorage.getItem("filmes")
+    
+    let filmesSalvos = JSON.parse(minhaLista) || [];
+    const hasFilme = filmesSalvos.some(
+      (filmeSalvo) => filmeSalvo.id === filme.id
+    );
+    
+    if(hasFilme){
+      alert("Você já possui esse filme salvo");
+      return;
+    }
+
+    filmesSalvos.push(filme);
+    localStorage.setItem("filmes", JSON.stringify(filmesSalvos));
+    alert("Filme salvo com sucesso");
+  }
 
   return (
     <div className="filme">
@@ -23,7 +40,7 @@ export default function Filme() {
       <h3>Sinopse</h3>
       <p>{filme.sinopse}</p>
       <div className="buttons">
-        <button>Salvar</button>
+        <button onClick={salvaFilme}>Salvar</button>
         <button>
           <a
             target="blank"
